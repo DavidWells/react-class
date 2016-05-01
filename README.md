@@ -1,4 +1,4 @@
-# [Phenomic](https://github.com/MoOx/phenomic) boilerplate
+# [React Powered Static ReactClass Site](https://reactclass.com)
 
 ## Install dependencies
 
@@ -17,3 +17,5 @@ $ npm start
 ```console
 $ npm run build
 ```
+
+# [Docs on Phenomic](https://phenomic.io/docs/usage/)
