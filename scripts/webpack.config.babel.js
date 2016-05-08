@@ -61,7 +61,11 @@ export default ({ config, pkg }) => ({
   },
 
   postcss: () => [
-    require("stylelint")(),
+    require("postcss-import")({
+      addDependencyTo: webpack,
+    }),
+    require("postcss-nested")(),
+    //require("stylelint")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
     require("postcss-browser-reporter")(),
     require("postcss-reporter")(),

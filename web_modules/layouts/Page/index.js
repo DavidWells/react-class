@@ -17,6 +17,7 @@ class Page extends Component {
       body,
       header,
       footer,
+      hideTitle,
     } = props
 
     invariant(
@@ -46,9 +47,10 @@ class Page extends Component {
         />
 
         {
-          head.title &&
+          !hideTitle && head.title &&
           <h1>{ head.title }</h1>
         }
+
         { header }
         {
           body &&
@@ -68,9 +70,14 @@ Page.propTypes = {
   __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,
   head: PropTypes.object.isRequired,
+  hideTitle: PropTypes.bool,
   body: PropTypes.string.isRequired,
   header: PropTypes.element,
   footer: PropTypes.element,
+}
+
+Page.defaultProps = {
+  hideTitle: false,
 }
 
 Page.contextTypes = {

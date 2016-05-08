@@ -8,6 +8,7 @@ import Page from "../layouts/Page"
 import PageError from "../layouts/PageError"
 import PageLoading from "../layouts/PageLoading"
 import Homepage from "../layouts/Homepage"
+import Blog from "../layouts/Blog"
 import Post from "../layouts/Post"
 
 class PageContainer extends Component {
@@ -22,6 +23,7 @@ class PageContainer extends Component {
           PageLoading,
           Homepage,
           Post,
+          Blog,
         } }
       />
     )

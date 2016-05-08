@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router"
-
+import logo from '../styles/images/react-class-logo-dark.png'
 import styles from "./index.css"
 import Svg from "react-svg-inline"
 import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
@@ -17,10 +17,16 @@ export default class Header extends Component {
               className={ styles.link }
               to="/"
             >
-              { "Home" }
+             <img src={logo} width='200px' />
             </Link>
           </div>
           <div className={ styles.navPart2 }>
+            <Link
+              className={ styles.link }
+              to="/blog"
+            >
+             Blog
+            </Link>
             <a
               href="https://twitter.com/Phenomic_app"
               className={ styles.link }

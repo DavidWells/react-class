@@ -3,7 +3,6 @@ import Helmet from "react-helmet"
 
 import Header from "../Header"
 import Footer from "../Footer"
-
 import styles from "./index.css"
 
 export default class Layout extends Component {
@@ -22,7 +21,7 @@ export default class Layout extends Component {
     } = this.context.metadata
 
     return (
-      <div className={ styles.layout }>
+      <div className={styles.layout}>
         <Helmet
           meta={ [
             { property: "og:site_name", content: pkg.name },

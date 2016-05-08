@@ -19,7 +19,7 @@ export default ({ config }) => {
             `babel-loader${
               config.dev ? "?presets[]=babel-preset-react-hmre" : ""
             }`,
-            "eslint-loader?fix",
+            //"eslint-loader",
           ],
           include: [
             path.resolve(config.cwd, "scripts"),

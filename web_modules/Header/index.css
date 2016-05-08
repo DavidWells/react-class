@@ -3,8 +3,9 @@
 }
 
 .header {
-  color: #eee;
-  background: #111;
+  color: #666;
+  padding: 20px 0px;
+  composes: container from "../styles/skeleton.css";
 }
 
 .nav {
@@ -13,9 +14,8 @@
   justify-content: space-between;
 
   max-width: calc(60rem + (var(--nav-item-padding) * 2));
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
-  line-height: 3rem;
+  max-width: 80%;
+  margin: auto;
 }
 
 .navPart1,

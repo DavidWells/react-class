@@ -1,7 +1,7 @@
 :global {
   /*
   * Skeleton V2.0.4
-  * Copyright 2014, Dave Gamache
+  * Copyright 2014, Dave Gamachez
   * www.getskeleton.com
   * Free to use under the MIT license.
   * http://www.opensource.org/licenses/mit-license.php
@@ -154,10 +154,11 @@
 
   /* Links */
   a {
-    color: #1EAEDB; }
+    color: #1EAEDB;
+  }
   a:hover {
-    color: #0FA0CE; }
-
+    color: #0FA0CE;
+  }
 
   /* Buttons */
   .button,
