@@ -17,22 +17,6 @@ export default class Footer extends Component {
             {  "<Phenomic />" }
           </span>
         </a>
-
-        { " | " }
-        { "Pages: " }
-        <Link
-          className={ styles.link }
-          to="/404.html"
-        >
-          { "404" }
-        </Link>
-        { ", " }
-        <Link
-          className={ styles.link }
-          to="/loading/"
-        >
-          { "Loading" }
-        </Link>
       </footer>
     )
   }

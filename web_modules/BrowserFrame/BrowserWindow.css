@@ -1,0 +1,85 @@
+/* Hero */
+:global {
+  .featured-image .browser-top {
+      border: 2px solid #ccc;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      display: block;
+      }
+      .featured-image .browser-top .row {
+      width: 100%;
+      }
+      .featured-image .browser-top .frame {
+      position: relative;
+      width: 65px;
+      background: purple;
+      }
+      .browser-top .row .cell {
+      display: table-cell;
+      vertical-align: middle;
+      }
+      .featured-image .browser-top .cell {
+      width: 100%;
+      }
+      .featured-image .address-bar {
+      background: #eee;
+      border-radius: 2px;
+      height: 25px;
+      margin: 8px 8px 8px 5px;
+      font-size: 12px;
+      color: #aaa;
+      line-height: 25px;
+      text-indent: 10px;
+      }
+      .featured-image .image-frame {
+        border: 2px solid #ccc;
+        border-top: 0;
+        border-radius: 0 0 5px 5px;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+      }
+      .featured-image .image-frame img {
+      max-width: 100%;
+      max-height: 200px;
+      display: block;
+      margin: auto;
+      }
+      .featured-image .browser-top .frame .dot {
+      float: left;
+      width: 10px;
+      height: 10px;
+      line-height: 10px;
+      margin: 0 10px;
+      background: #ffbf00;
+      border-radius: 100%;
+      position: absolute;
+      top: 5px;
+      top: 16px;
+      left: 1.2em;
+      }
+      .browser-top {
+      display: table;
+      width: 100%;
+      }
+      .browser-top .row {
+      display: table-row;
+      }
+      .featured-image .browser-top .frame .dot:after, .featured-image .browser-top .frame .dot:before {
+      content: " ";
+      float: left;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      line-height: 10px;
+      background: #d90000;
+      border-radius: 100%;
+      position: absolute;
+      right: 100%;
+      }
+      .featured-image .browser-top .frame .dot:after {
+      right: auto;
+      left: 100%;
+      background: #00b285;
+      }
+}

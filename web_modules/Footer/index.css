@@ -1,8 +1,11 @@
 .footer {
-  margin-top: 1rem;
+  background: #666;
   padding: 1rem;
   font-size: 0.75rem;
   text-align: center;
+  align-self: flex-end;
+  width: 100%;
+  color: #fff;
 }
 
 .link {

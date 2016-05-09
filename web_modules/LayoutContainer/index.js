@@ -19,7 +19,7 @@ export default class Layout extends Component {
     const {
       pkg,
     } = this.context.metadata
-
+    console.log('current', this.props)
     return (
       <div className={styles.layout}>
         <Helmet
@@ -28,7 +28,7 @@ export default class Layout extends Component {
             { name: "twitter:site", content: `@${ pkg.twitter }` },
           ] }
         />
-        <Header />
+        <Header url={this.props.params} />
         <div className={ styles.content }>
           { this.props.children }
         </div>

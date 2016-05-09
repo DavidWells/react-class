@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 import invariant from "invariant"
 
-class Page extends Component {
+class FullWidthPage extends Component {
   render() {
     const { props, context } = this
 
@@ -40,7 +40,7 @@ class Page extends Component {
     ]
 
     return (
-      <div className='container'>
+      <div>
         <Helmet
           title={ metaTitle }
           meta={ meta }
@@ -52,7 +52,6 @@ class Page extends Component {
         }
 
         { header }
-
         {
           body &&
           <div
@@ -66,7 +65,7 @@ class Page extends Component {
   }
 }
 
-Page.propTypes = {
+FullWidthPage.propTypes = {
   children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   __filename: PropTypes.string.isRequired,
   __url: PropTypes.string.isRequired,
@@ -77,12 +76,12 @@ Page.propTypes = {
   footer: PropTypes.element,
 }
 
-Page.defaultProps = {
+FullWidthPage.defaultProps = {
   hideTitle: false,
 }
 
-Page.contextTypes = {
+FullWidthPage.contextTypes = {
   metadata: PropTypes.object.isRequired,
 }
 
-export default Page
+export default FullWidthPage

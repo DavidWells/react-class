@@ -8,6 +8,8 @@ import Page from "../layouts/Page"
 import PageError from "../layouts/PageError"
 import PageLoading from "../layouts/PageLoading"
 import Homepage from "../layouts/Homepage"
+import Training from "../layouts/Training"
+import Contact from "../layouts/Contact"
 import Blog from "../layouts/Blog"
 import Post from "../layouts/Post"
 
@@ -22,8 +24,10 @@ class PageContainer extends Component {
           PageError,
           PageLoading,
           Homepage,
+          Contact,
           Post,
           Blog,
+          Training,
         } }
       />
     )

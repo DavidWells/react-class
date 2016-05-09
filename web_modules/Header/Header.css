@@ -1,21 +1,16 @@
-:root {
-  --nav-item-padding: 0.5rem;
-}
 
+.headerWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 .header {
   color: #666;
-  padding: 20px 0px;
-  composes: container from "../styles/skeleton.css";
 }
 
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  max-width: calc(60rem + (var(--nav-item-padding) * 2));
-  max-width: 80%;
-  margin: auto;
+  padding: 20px 0px;
 }
 
 .navPart1,
@@ -26,12 +21,22 @@
 
 .link {
   display: flex;
+  font-weight: bold;
   align-items: center;
-
-  padding: 0 var(--nav-item-padding);
-
+  justify-content: center;
+  border: solid 2px transparent;
   color: inherit;
   text-decoration: none;
+  padding: 0 15px;
+  span {
+    margin-bottom: 2px;
+  }
+  &:hover, &.active {
+    color: #00B1E1;
+    border-color: #e9e9ec;
+    border-radius: 70px;
+    border-bottom: solid 2px #e9e9ec;
+  }
 }
 
 .link svg {

@@ -1,0 +1,4 @@
+---
+title: Training
+layout: Training
+---
