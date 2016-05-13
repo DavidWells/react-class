@@ -1,0 +1,97 @@
+.titleContainer {
+  padding-top: 30px;
+  background: rgba(97,218,251,1);
+  background: linear-gradient(225deg, #61DAFB 0%,#2FBFE8 100%);
+  min-height: 120px;
+}
+.title {
+  text-align: center;
+  font-size: 4.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+}
+.subtitle {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #333;
+  @media (max-width: 550px) {
+    font-size: 1.4rem;
+  }
+}
+
+:global {
+  .section__title {
+      font-size: 24px;
+      color: #3b3b58;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      margin: 14px 0;
+  }
+  .section__intro {
+      margin-left: 15%;
+      margin-right: 15%;
+  }
+  .section__intro {
+      display: block;
+      text-align: center;
+      margin: 0 5% 30px;
+  }
+  .box__grid {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+  }
+  .box {
+      flex: 0 0 30%;
+      margin-bottom: 20px;
+      background: #F1F1F1;
+      border-radius: 8px;
+      @media (max-width: 550px) {
+        flex: 0 0 100%;
+      }
+  }
+  .box__content {
+      color: #454545;
+      text-align: center;
+      ul {
+        text-align: left;
+        width: 100%;
+        margin: 0px;
+        padding: 0;
+
+        li {
+          padding: 14px 20px;
+          padding-right: 5px;
+          margin: 0px;
+          text-decoration: none;
+        }
+        li:nth-child(odd) {
+          background-color: #ccc;
+
+        }
+        li:nth-child(even) {
+          background-color: #E4E4E4;
+
+        }
+        li:last-of-type {
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+  }
+  .box__title {
+    margin: 15px 0;
+  }
+  .box__more {
+      color: #ff4e5c;
+  }
+}

@@ -16,9 +16,9 @@ export default class BrowserWindow extends Component {
             </div>
           </div>
         </div>
-        <a href="lksjalkjdl" className="image-frame">
+        <div className="image-frame">
           <img alt="Medium_signschool" src={this.props.image} />
-        </a>
+        </div>
       </div>
     )
   }

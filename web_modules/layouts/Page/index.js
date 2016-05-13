@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react"
+import styles from './Page.css'
 import Helmet from "react-helmet"
 import invariant from "invariant"
 
@@ -27,6 +28,8 @@ class Page extends Component {
 
     const metaTitle = head.metaTitle ? head.metaTitle : head.title
 
+    const showFooter = (head.footer === false) ? false : true
+
     const meta = [
       { property: "og:type", content: "article" },
       { property: "og:title", content: metaTitle },
@@ -48,7 +51,7 @@ class Page extends Component {
 
         {
           !hideTitle && head.title &&
-          <h1>{ head.title }</h1>
+          <h1 className={styles.title}>{ head.title }</h1>
         }
 
         { header }
@@ -60,7 +63,7 @@ class Page extends Component {
           />
         }
         { props.children }
-        { footer }
+        { showFooter && footer }
       </div>
     )
   }

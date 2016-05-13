@@ -31,6 +31,18 @@ export default ({ config, pkg }) => ({
           },
         },
       },
+      /*
+        ref: https://github.com/MoOx/phenomic/issues/443
+       {
+        test: /global-css(\/|\\).*\.css$/,
+        loader: ExtractTextPlugin.extract(
+          "style-loader",
+          [
+            "css-loader",
+            "postcss-loader",
+          ].join("!"),
+        ),
+      },*/
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract(
@@ -65,6 +77,16 @@ export default ({ config, pkg }) => ({
       addDependencyTo: webpack,
     }),
     require("postcss-nested")(),
+    require('postcss-simple-vars')({
+      variables: function () {
+        var cssVariables = require('../web_modules/styles/variables')
+        return cssVariables
+      },
+      unknown: function unknown(node, name, result) {
+        node.warn(result, 'Unknown variable ' + name);
+      }
+    }),
+    //require("postcss-custom-media"),
     //require("stylelint")(),
     require("postcss-cssnext")({ browsers: "last 2 versions" }),
     require("postcss-browser-reporter")(),

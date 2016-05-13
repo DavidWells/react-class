@@ -5,6 +5,7 @@ import Header from "../Header"
 import Footer from "../Footer"
 import styles from "./index.css"
 
+
 export default class Layout extends Component {
 
   static propTypes = {
@@ -13,13 +14,14 @@ export default class Layout extends Component {
 
   static contextTypes = {
     metadata: PropTypes.object.isRequired,
+    router: React.PropTypes.object.isRequired
   };
 
   render() {
     const {
       pkg,
     } = this.context.metadata
-    console.log('current', this.props)
+
     return (
       <div className={styles.layout}>
         <Helmet
@@ -32,7 +34,7 @@ export default class Layout extends Component {
         <div className={ styles.content }>
           { this.props.children }
         </div>
-        <Footer />
+        <Footer {...this.props} />
       </div>
     )
   }

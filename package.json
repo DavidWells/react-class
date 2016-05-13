@@ -9,7 +9,9 @@
     "start": "phenomic start",
     "build": "phenomic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "predeploy": "cp -rf CNAME dist",
+    "deploy": "cd dist && surge"
   },
   "phenomic": {
     "CNAME": false
@@ -58,6 +60,7 @@
     "phenomic": "^0.11.0",
     "postcss-browser-reporter": "^0.4.0",
     "postcss-cssnext": "^2.4.0",
+    "postcss-custom-media": "^5.0.1",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.7.0",
     "postcss-nested": "^1.0.0",
@@ -78,6 +81,9 @@
     "whatwg-fetch": "^0.11.0"
   },
   "dependencies": {
-    "normalize-css": "^2.3.1"
+    "axios": "^0.11.0",
+    "css-mqpacker": "^5.0.1",
+    "normalize-css": "^2.3.1",
+    "postcss-simple-vars": "^1.2.0"
   }
 }

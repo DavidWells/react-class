@@ -26,9 +26,11 @@ export default class Header extends Component {
       const active = currentURL === link.href.replace('/', '')
       const activeClass = (active) ? styles.active : ''
       return (
-        <Link key={i} className={`${styles.link} ${activeClass}`} to={link.href}>
+        <span className={`${styles.linkWrapper}`} key={i} >
+          <Link className={`${styles.link} ${activeClass}`} to={link.href}>
           <span>{link.text}</span>
         </Link>
+        </span>
       )
     })
   }
@@ -45,7 +47,7 @@ export default class Header extends Component {
             <Link
               to="/"
             >
-             <img src={logo} width='200px' />
+             <img src={logo} width='240px' />
             </Link>
           </div>
           <div className={ styles.navPart2 }>
