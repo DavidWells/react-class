@@ -6,3 +6,13 @@
     margin-bottom: 2rem;
   }
 }
+.textarea {
+  min-height: 150px;
+}
+.formSubmit {
+  text-align:center;
+}
+.submit {
+  min-width: 80%;
+  margin: auto;
+}

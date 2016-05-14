@@ -3,66 +3,12 @@ import axios from 'axios'
 import styles from './Contact.css'
 import Page from "../Page"
 
-/**
- *       jQuery(document).ready(function($) {
-
-       jQuery("#contact-send").on('click', function (e) {
-        e.preventDefault()
-        var name = jQuery("#name").val()
-        var email = jQuery("#email").val()
-        var comment = jQuery("#comment").val()
-        var company = jQuery("#company").val()
-        var phone = jQuery("#phone").val()
-        var re = /^([\w_\.\-\+])+\@([\w\-]+\.)+([\w]{2,10})+$/
-        if (email == '' || !re.test(email)) {
-          alert('please enter a valid email address')
-          return false
-        }
-        if(email && comment) {
-          var data = {
-             "fields": {
-               "Name": name,
-               "Message": comment,
-               "Email": email,
-               "Company": company,
-               "Phone": phone
-             }
-          }
-          axios({
-            method: 'post',
-            url: 'https://api.airtable.com/v0/appRokysVIYeDAEgA/Contact%20Us',
-            data: data,
-            headers: {
-             'Authorization': 'Bearer keyhIGB1sKiwklGzU',
-            },
-          }).then(function(response) {
-              // console.log(response.data);
-              // console.log(response.status);
-              // console.log(response.statusText);
-              // console.log(response.headers);
-              // console.log(response.config);
-              window.location.href = '/thanks.html'
-         });
-        } else {
-          alert('Please a message')
-        }
-
-       });
-
-      });
- */
-
-
 export default class Contact extends Component {
 
   constructor (props, context) {
     super(props, context)
     this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      text: ''
+      misc: null
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -140,12 +86,15 @@ export default class Contact extends Component {
                 </div>
               </div>
               <label htmlFor="exampleMessage">Message</label>
-              <textarea onChange={this.handleChange} data-input='text' className="u-full-width" placeholder="Leave your message here!" value={this.state.text} />
-
-              <input
-                className="button-primary"
-                type="submit"
-              />
+              <textarea onChange={this.handleChange} data-input='text' className={styles.textarea + " u-full-width"} placeholder="Leave your message here!" value={this.state.text} />
+              <div className={styles.formSubmit}>
+                <button
+                  className={styles.submit + " button-primary"}
+                  type="submit"
+                >
+                  Get in touch
+                </button>
+              </div>
             </form>
           </div>
       </Page>
